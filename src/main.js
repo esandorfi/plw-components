@@ -1,8 +1,18 @@
-import Vue from 'vue'
-import App from './App.vue'
+// import Vue from 'vue'
 
-Vue.config.productionTip = false
+ // import components here
+ import Button from "./components/button.vue";
+ import ButtonBlack from "./components/button-black.vue";
+ 
+ // export components for this library
+ export default {
+   Button,
+   ButtonBlack
+ };
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+
+// Vue.config.productionTip = false
+
+// new Vue({
+//   render: h => h(App),
+// }).$mount('#app')

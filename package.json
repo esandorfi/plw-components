@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "npm run build:wc & npm run build:lib",
+    "lint": "vue-cli-service lint",
+    "build:lib": "vue-cli-service build --target lib --name plw-components --no-clean src/main.js",
+    "build:wc": "vue-cli-service build --target wc --name plw-components --no-clean src/components/*.vue"
   },
+  "main": "dist/plw-components.common.js",
+  "unpkg": "dist/plw-components.min.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
