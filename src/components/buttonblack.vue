@@ -4,9 +4,10 @@
 
 <script>
   export default {
+    name: "PlwButtonBlack",
     data() {
       return {
-        label: "Button Black",
+        label: "Button Say Black",
       };
     },
   };

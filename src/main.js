@@ -1,18 +1,16 @@
-// import Vue from 'vue'
+import Vue from 'vue'
+import PlwButton from "./components/button.vue";
+import PlwButtonBlack from "./components/buttonblack.vue";
 
- // import components here
- import Button from "./components/button.vue";
- import ButtonBlack from "./components/button-black.vue";
+import Main from "./sandbox/main.vue"
  
- // export components for this library
- export default {
-   Button,
-   ButtonBlack
- };
+ Vue.config.productionTip = false
 
+// utilisation des composants pour toutes les instances de vue qui suivent
+Vue.component(PlwButton.name, PlwButton)
+Vue.component(PlwButtonBlack.name, PlwButtonBlack)
 
-// Vue.config.productionTip = false
-
-// new Vue({
-//   render: h => h(App),
-// }).$mount('#app')
+// Creation de l'instance de vue associé à #app
+new Vue({
+   render: h => h(Main),
+}).$mount('#app')

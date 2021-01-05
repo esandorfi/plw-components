@@ -1,12 +1,13 @@
 {
-  "name": "plw-components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@parleweb.com/plw-components",
+  "repository": "github.com:parleweb/plw-components",
+  "version": "0.1.3",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build:wc & npm run build:lib",
+    "build": "npm run build:lib & npm run build:wc",
     "lint": "vue-cli-service lint",
-    "build:lib": "vue-cli-service build --target lib --name plw-components --no-clean src/main.js",
+    "build:lib": "vue-cli-service build --target lib --name plw-components --no-clean src/plugin.js",
     "build:wc": "vue-cli-service build --target wc --name plw-components --no-clean src/components/*.vue"
   },
   "main": "dist/plw-components.common.js",
